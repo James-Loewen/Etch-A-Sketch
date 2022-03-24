@@ -1,10 +1,41 @@
 const divContainer = document.querySelector('.grid-container');
 let width = 512;
-let numSquaresPerSide = 30;
+let numSquaresPerSide = 40;
 
-for (let i = 0; i < (numSquaresPerSide ** 2); i++) {
-  let square = document.createElement('div');
-  square.style.width = `${width / numSquaresPerSide}px`;
-  square.style.height = `${width / numSquaresPerSide}px`;
-  divContainer.appendChild(square);
+function setWidth() {
+  numSquaresPerSide = window.prompt("What pixel size would please you, m'lord?");
+  while (numSquaresPerSide > 64) {
+    numSquaresPerSide = window.prompt("Please pick a number between 1 and 64, m'lord.");
+  }
 }
+
+function populateBoard(e) {
+  if (!divContainer.firstChild) {
+    setWidth();
+    for (let i = 0; i < (numSquaresPerSide ** 2); i++) {
+      let square = document.createElement('div');
+      square.style.width = `${e.target.boardWidth / numSquaresPerSide}px`;
+      square.style.height = `${e.target.boardWidth / numSquaresPerSide}px`;
+      square.addEventListener('mouseenter', draw);
+      divContainer.appendChild(square);
+    }
+  }
+}
+
+function eraseBoard() {
+  while (divContainer.firstChild) {
+    divContainer.removeChild(divContainer.firstChild);
+  }
+}
+
+function draw(e) {
+  e.target.style.backgroundColor = 'gray';
+}
+
+
+const startBtn = document.querySelector('#start');
+startBtn.boardWidth = width;
+startBtn.addEventListener('click', populateBoard);
+
+const eraseBtn = document.querySelector('#erase');
+eraseBtn.addEventListener('click', eraseBoard);

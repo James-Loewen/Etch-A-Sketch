@@ -9,33 +9,49 @@ p {
 
 .board-wrapper {
   background-color: red;
-  /* color: gold; */
-  padding: 0px 80px 80px 80px;
-  margin: auto;
-  width: 512px;
+  margin: 20px auto;
+  width: 650px;
+  height: auto;
   border-radius: 20px;
 }
 
 .board-wrapper h2 {
-  font-size: 4rem;
+  font-size: 3rem;
   color: gold;
   text-align: center;
   padding: 20px;
 }
 
+.page-heading {
+  text-align: center;
+  display: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#start,
+#erase {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 30px;
+}
+
 .grid-container {
   background-color: white;
-  /* margin: auto; */
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
   width: 512px;
-  /* border: solid 1px red;
-  border-radius: 20px; */
+  height: 512px;
 }
 
-.grid-container div {
-  /* background-color: blue; */
-}
+/* .grid-container div {
+  background-color: blue;
+} */
 
 .grid-container div:hover {
   background-color: gray;
