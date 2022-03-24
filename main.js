@@ -1,6 +1,7 @@
 const divContainer = document.querySelector('.grid-container');
-let width = 512;
-let numSquaresPerSide = 40;
+const width = 512;
+// As of right now, I don't need an initial value for this, but that will change eventually
+let numSquaresPerSide // = 40;
 
 function setWidth() {
   numSquaresPerSide = window.prompt("What pixel size would please you, m'lord?");
@@ -31,7 +32,6 @@ function eraseBoard() {
 function draw(e) {
   e.target.style.backgroundColor = 'gray';
 }
-
 
 const startBtn = document.querySelector('#start');
 startBtn.boardWidth = width;
