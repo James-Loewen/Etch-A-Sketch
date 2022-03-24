@@ -1,4 +1,42 @@
-body {
+body,
+h1,
+h2,
+h3,
+p {
   margin: 0;
   padding: 0;
+}
+
+.board-wrapper {
+  background-color: red;
+  /* color: gold; */
+  padding: 0px 80px 80px 80px;
+  margin: auto;
+  width: 512px;
+  border-radius: 20px;
+}
+
+.board-wrapper h2 {
+  font-size: 4rem;
+  color: gold;
+  text-align: center;
+  padding: 20px;
+}
+
+.grid-container {
+  background-color: white;
+  /* margin: auto; */
+  display: flex;
+  flex-wrap: wrap;
+  width: 512px;
+  /* border: solid 1px red;
+  border-radius: 20px; */
+}
+
+.grid-container div {
+  /* background-color: blue; */
+}
+
+.grid-container div:hover {
+  background-color: gray;
 }
