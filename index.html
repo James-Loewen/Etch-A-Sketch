@@ -9,13 +9,27 @@
   <title>Etch-a-Sketch</title>
 </head>
 <body>
-  <h1 class="page-heading">Etch yourself a dang Sketch</h1>
-  <div class="board-wrapper">
-    <h2 class="board-header">Etch-a-Dang-Old-Sketch</h2>
-    <div class="grid-container"></div>
-    <div class="button-container">
-      <button id="start">Start</button>
-      <button id="erase">Erase</button>
+  <div class="main-nav">
+    <ul class="nav-flex">
+      <li>This</li>
+      <li>That</li>
+      <li>The other thing</li>
+    </ul>
+  </div>
+  <div class="main-content-container">
+    <div class="input-container">
+      <h2>How many pixels wide should the canvas be? (1 to 64)</h2>
+      <input id="num-pixels" type="number" min="1" max="64" value="32">
+      <h2>What color would you like to draw? (Can be a color name or a hex code)</h2>
+      <input id="draw-color" type="text" value="gray">
+    </div>
+    <div class="board-wrapper">
+      <h2 class="board-header">Etch-a-Dang-Old-Sketch</h2>
+      <div class="grid-container"></div>
+      <div class="button-container">
+        <button id="start">Start</button>
+        <button id="erase">Erase</button>
+      </div>
     </div>
   </div>
 </body>

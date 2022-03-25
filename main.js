@@ -1,13 +1,10 @@
 const divContainer = document.querySelector('.grid-container');
 const width = 512;
-// As of right now, I don't need an initial value for this, but that will change eventually
-let numSquaresPerSide // = 40;
+let numSquaresPerSide;
 
 function setWidth() {
-  numSquaresPerSide = window.prompt("What pixel size would please you, m'lord?");
-  while (numSquaresPerSide > 64) {
-    numSquaresPerSide = window.prompt("Please pick a number between 1 and 64, m'lord.");
-  }
+  numSquaresPerSide = parseInt(document.querySelector('#num-pixels').value)
+  console.log(numSquaresPerSide);
 }
 
 function populateBoard(e) {

@@ -7,6 +7,27 @@ p {
   padding: 0;
 }
 
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem;
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.main-content-container {
+  display: flex;
+}
+
+.input-container {
+  padding: 1rem;
+}
+
 .board-wrapper {
   background-color: red;
   margin: 20px auto;
@@ -20,11 +41,6 @@ p {
   color: gold;
   text-align: center;
   padding: 20px;
-}
-
-.page-heading {
-  text-align: center;
-  display: none;
 }
 
 .button-container {
