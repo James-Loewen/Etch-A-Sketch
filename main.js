@@ -1,9 +1,15 @@
 const divContainer = document.querySelector('.grid-container');
 const width = 512;
 let numSquaresPerSide;
+let color;
 
 function setWidth() {
   numSquaresPerSide = parseInt(document.querySelector('#num-pixels').value)
+  if (numSquaresPerSide < 1) {
+    numSquaresPerSide = 1;
+  } else if (numSquaresPerSide > 64) {
+    numSquaresPerSide = 64;
+  }
   console.log(numSquaresPerSide);
 }
 
@@ -27,7 +33,8 @@ function eraseBoard() {
 }
 
 function draw(e) {
-  e.target.style.backgroundColor = 'gray';
+  color = document.querySelector('#draw-color').value;
+  e.target.style.backgroundColor = color;
 }
 
 const startBtn = document.querySelector('#start');

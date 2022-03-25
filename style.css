@@ -14,26 +14,32 @@ ul {
   margin: 1rem;
 }
 
-.nav-flex {
+/* .nav-flex {
   display: flex;
   justify-content: center;
   gap: 2rem;
-}
+} */
 
 .main-content-container {
+  margin: 20px;
   display: flex;
+  justify-content: center;
+  gap: 35px;
 }
 
 .input-container {
   padding: 1rem;
+  width: 200px;
+  /* border: solid 2px pink; */
 }
 
 .board-wrapper {
   background-color: red;
-  margin: 20px auto;
+  /* margin: 20px auto; */
   width: 650px;
   height: auto;
   border-radius: 20px;
+  /* border: solid 2px pink; */
 }
 
 .board-wrapper h2 {
